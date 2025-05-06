@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Personal Frequency | Zentermind</title>
+    <meta name="description" content="Take our quiz to discover which meditation frequency will best support your spiritual journey. Personalized frequency recommendations for your consciousness needs.">
+    <meta name="keywords" content="frequency quiz, personal frequency, meditation assessment, frequency finder, spiritual meditation quiz">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    
+    <!-- Google Fonts - Abro Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo-container">
+            <a href="index.html" class="logo">⛩️ zentermind</a>
+        </div>
+        <div class="nav-pills">
+            <a href="index.html" class="nav-pill">Home</a>
+            <a href="frequencies.html" class="nav-pill">Frequencies</a>
+            <a href="app.html" class="nav-pill">App</a>
+            <a href="music.html" class="nav-pill">Music</a>
+            <a href="ai-call.html" class="nav-pill">AI Call</a>
+            <a href="https://blog.zentermind.com" class="nav-pill">Blog</a>
+            <a href="subscribe.html" class="nav-pill">Subscribe</a>
+        </div>
+    </nav>
+
+    <!-- Quiz Header -->
+    <section class="quiz-header">
+        <div class="quiz-header-content">
+            <h1>Discover Your Personal Frequency</h1>
+            <p>Your spiritual journey is unique. Answer a few questions to find which frequency will best support your current consciousness state.</p>
+        </div>
+    </section>
+
+    <!-- Quiz Container -->
+    <section class="quiz-container">
+        <div class="quiz-progress">
+            <div class="progress-bar">
+                <div class="progress-filled"></div>
+            </div>
+            <div class="progress-text">Question <span id="current-question">1</span> of 6</div>
+        </div>
+
+        <!-- Quiz Form -->
+        <form id="frequency-quiz" class="quiz-form">
+            <!-- Question 1 -->
+            <div class="quiz-question active" data-question="1">
+                <h2>What brings you to meditation today?</h2>
+                <div class="question-options">
+                    <div class="option">
+                        <input type="radio" name="purpose" id="purpose-stress" value="stress">
+                        <label for="purpose-stress">
+                            <div class="option-icon"><i class="fas fa-wind"></i></div>
+                            <div class="option-text">Stress Relief</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="purpose" id="purpose-sleep" value="sleep">
+                        <label for="purpose-sleep">
+                            <div class="option-icon"><i class="fas fa-moon"></i></div>
+                            <div class="option-text">Better Sleep</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="purpose" id="purpose-focus" value="focus">
+                        <label for="purpose-focus">
+                            <div class="option-icon"><i class="fas fa-bullseye"></i></div>
+                            <div class="option-text">Improved Focus</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="purpose" id="purpose-spiritual" value="spiritual">
+                        <label for="purpose-spiritual">
+                            <div class="option-icon"><i class="fas fa-om"></i></div>
+                            <div class="option-text">Spiritual Growth</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="purpose" id="purpose-healing" value="healing">
+                        <label for="purpose-healing">
+                            <div class="option-icon"><i class="fas fa-heart"></i></div>
+                            <div class="option-text">Emotional Healing</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="quiz-navigation">
+                    <button type="button" class="next-button" disabled>Continue</button>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-question" data-question="2">
+                <h2>Which describes your current emotional state?</h2>
+                <div class="question-options emotional-states">
+                    <div class="option">
+                        <input type="radio" name="emotional-state" id="state-scattered" value="scattered">
+                        <label for="state-scattered">
+                            <div class="emotional-visual scattered"></div>
+                            <div class="option-text">Scattered & Distracted</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="emotional-state" id="state-stressed" value="stressed">
+                        <label for="state-stressed">
+                            <div class="emotional-visual stressed"></div>
+                            <div class="option-text">Stressed & Anxious</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="emotional-state" id="state-balanced" value="balanced">
+                        <label for="state-balanced">
+                            <div class="emotional-visual balanced"></div>
+                            <div class="option-text">Balanced & Centered</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="emotional-state" id="state-healing" value="healing">
+                        <label for="state-healing">
+                            <div class="emotional-visual healing"></div>
+                            <div class="option-text">Healing & Processing</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="emotional-state" id="state-spiritual" value="spiritual">
+                        <label for="state-spiritual">
+                            <div class="emotional-visual spiritual"></div>
+                            <div class="option-text">Seeking Connection</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="quiz-navigation">
+                    <button type="button" class="prev-button">Back</button>
+                    <button type="button" class="next-button" disabled>Continue</button>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-question" data-question="3">
+                <h2>What time of day do you typically meditate?</h2>
+                <div class="question-options">
+                    <div class="option">
+                        <input type="radio" name="time" id="time-morning" value="morning">
+                        <label for="time-morning">
+                            <div class="option-icon"><i class="fas fa-sun"></i></div>
+                            <div class="option-text">Morning</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="time" id="time-afternoon" value="afternoon">
+                        <label for="time-afternoon">
+                            <div class="option-icon"><i class="fas fa-cloud-sun"></i></div>
+                            <div class="option-text">Afternoon</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="time" id="time-evening" value="evening">
+                        <label for="time-evening">
+                            <div class="option-icon"><i class="fas fa-moon"></i></div>
+                            <div class="option-text">Evening</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="time" id="time-bedtime" value="bedtime">
+                        <label for="time-bedtime">
+                            <div class="option-icon"><i class="fas fa-bed"></i></div>
+                            <div class="option-text">Before Bed</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="time" id="time-varies" value="varies">
+                        <label for="time-varies">
+                            <div class="option-icon"><i class="fas fa-random"></i></div>
+                            <div class="option-text">Varies</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="quiz-navigation">
+                    <button type="button" class="prev-button">Back</button>
+                    <button type="button" class="next-button" disabled>Continue</button>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-question" data-question="4">
+                <h2>Do you experience any of the following?</h2>
+                <div class="question-options checkbox-options">
+                    <div class="option">
+                        <input type="checkbox" name="experience" id="experience-anxiety" value="anxiety">
+                        <label for="experience-anxiety">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Anxiety</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="experience" id="experience-sleep" value="sleep">
+                        <label for="experience-sleep">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Trouble Sleeping</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="experience" id="experience-focus" value="focus">
+                        <label for="experience-focus">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Lack of Focus</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="experience" id="experience-fatigue" value="fatigue">
+                        <label for="experience-fatigue">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Emotional Fatigue</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="experience" id="experience-disconnect" value="disconnect">
+                        <label for="experience-disconnect">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Spiritual Disconnect</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="quiz-navigation">
+                    <button type="button" class="prev-button">Back</button>
+                    <button type="button" class="next-button">Continue</button>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="quiz-question" data-question="5">
+                <h2>What are your meditation goals?</h2>
+                <div class="question-options checkbox-options">
+                    <div class="option">
+                        <input type="checkbox" name="goals" id="goals-calm" value="calm">
+                        <label for="goals-calm">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Finding Inner Peace</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="goals" id="goals-clarity" value="clarity">
+                        <label for="goals-clarity">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Mental Clarity</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="goals" id="goals-emotional" value="emotional">
+                        <label for="goals-emotional">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Emotional Healing</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="goals" id="goals-spiritual" value="spiritual">
+                        <label for="goals-spiritual">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Spiritual Growth</div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="goals" id="goals-energy" value="energy">
+                        <label for="goals-energy">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Energy Balance</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="quiz-navigation">
+                    <button type="button" class="prev-button">Back</button>
+                    <button type="button" class="next-button">Continue</button>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="quiz-question" data-question="6">
+                <h2>How would you describe your spiritual practice?</h2>
+                <div class="question-options range-options">
+                    <div class="range-labels">
+                        <span>Beginner</span>
+                        <span>Intermediate</span>
+                        <span>Advanced</span>
+                    </div>
+                    <div class="range-container">
+                        <input type="range" name="practice-level" id="practice-level" min="1" max="5" value="3">
+                        <div class="range-marks">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="range-value">Moderately Experienced</div>
+                </div>
+                <div class="quiz-navigation">
+                    <button type="button" class="prev-button">Back</button>
+                    <button type="button" class="submit-button">Reveal My Frequency</button>
+                </div>
+            </div>
+
+            <!-- Email Capture -->
+            <div class="quiz-question email-capture" data-question="email">
+                <h2>Your Results Are Ready!</h2>
+                <p>Enter your email to receive your personalized frequency recommendation.</p>
+                <div class="email-form">
+                    <div class="form-group">
+                        <label for="user-email">Email Address</label>
+                        <input type="email" name="email" id="user-email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" name="subscribe" id="subscribe" checked>
+                        <label for="subscribe">
+                            <div class="checkbox-visual"></div>
+                            <div class="option-text">Send me meditation tips and frequency insights</div>
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-email">Get My Results</button>
+                </div>
+            </div>
+
+            <!-- Results (initially hidden, shown after email submission) -->
+            <div class="quiz-results">
+                <div class="result-header">
+                    <h2>Your Recommended Frequency</h2>
+                </div>
+                <div class="result-frequency">
+                    <div class="result-animation">
+                        <div class="frequency-circle">444 Hz</div>
+                    </div>
+                    <div class="result-title">444 Hz: The Frequency of Heart Healing</div>
+                </div>
+                <div class="result-description">
+                    <p>Based on your responses, the 444 Hz frequency will best support your spiritual journey right now. This frequency is perfect for emotional healing and opening your heart to deeper connections.</p>
+                    <p>The 444 Hz frequency creates a resonance that helps dissolve emotional blockages and heal past wounds. As you meditate with this frequency, you may experience profound emotional releases and a deeper sense of inner peace.</p>
+                </div>
+                <div class="result-recommendations">
+                    <h3>How to Use Your Frequency</h3>
+                    <ul>
+                        <li><strong>Daily Practice:</strong> Meditate with 444 Hz for 15-20 minutes daily</li>
+                        <li><strong>Best Time:</strong> Evening meditation for emotional processing</li>
+                        <li><strong>Complementary Frequency:</strong> 528 Hz for transformation</li>
+                    </ul>
+                </div>
+                <div class="result-cta">
+                    <a href="https://apps.apple.com/co/app/zentermind/id6455496491?l=en-GB" class="primary-cta">
+                        <i class="fab fa-apple"></i> Experience 444 Hz
+                    </a>
+                    <a href="frequencies/444hz.html" class="secondary-cta">
+                        <i class="fas fa-info-circle"></i> Learn More About 444 Hz
+                    </a>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html" class="logo">⛩️ zentermind</a>
+                <p class="tagline">Serenity Beyond Sanctuary</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="frequencies.html">Frequencies</a></li>
+                        <li><a href="app.html">App</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="ai-call.html">AI Call</a></li>
+                        <li><a href="https://blog.zentermind.com">Blog</a></li>
+                        <li><a href="subscribe.html">Subscribe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://instagram.com/zentermind">Instagram</a></li>
+                        <li><a href="https://open.spotify.com/artist/3xrUd0qpB0oYn3vlkdbf3Z?si=AYK3wg74TXO1ju3dEdL4nQ">Spotify</a></li>
+                        <li><a href="mailto:hello@zentermind.com">hello@zentermind.com</a></li>
+                        <li><a href="https://wa.me/573332200100">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="https://legal.zentermind.com/privacy">Privacy Policy</a></li>
+                        <li><a href="https://legal.zentermind.com/terms">Terms of Service</a></li>
+                        <li><a href="https://legal.zentermind.com/cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h4>Join Our Frequency Community</h4>
+                <p>Subscribe for meditation insights and spiritual growth tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Zentermind. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
