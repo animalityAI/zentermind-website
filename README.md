@@ -24,9 +24,34 @@ The Zentermind website is built with:
 - 🔒 **Security**: GDPR-compliant data handling
 - 🌐 **Platform Integration**: Seamless connections to App Store, Spotify, and Instagram
 
+## 📂 Project Structure
+
+```
+zentermind/
+├── index.html             # Homepage
+├── frequencies.html       # Frequencies education page
+├── app.html               # App showcase page
+├── music.html             # Spotify integration page
+├── ai-call.html           # AI consultation service page
+├── quiz.html              # Interactive frequency finder
+├── subscribe.html         # Membership options
+├── assets/                # Images and static resources
+├── css/                   # Stylesheet files
+│   ├── styles.css         # Main stylesheet
+│   ├── frequencies.css    # Frequencies page styles
+│   └── quiz.css           # Quiz page styles
+└── js/                    # JavaScript files
+    ├── main.js            # Main functionality
+    ├── animations.js      # Animation effects
+    ├── frequencies.js     # Frequencies page interactions
+    └── quiz.js            # Quiz functionality
+```
+
 ## 📜 License
 
 © 2025 Zentermind. All Rights Reserved.
+
+This repository and all its contents are proprietary and confidential.
 
 ---
 
